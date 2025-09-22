@@ -1,0 +1,123 @@
+.BackgroundHeader{
+  display: flex;
+  align-items: Center;
+  gap: 20px;
+  padding: 10px 10px;
+  background-color: beige;
+}
+.Logoimage{
+  background-image: url("./Screenshot\ 2025-09-21\ 104059.png");
+  width: 15vh;
+  height: 10vh;
+  background-size: cover;
+  border-radius: 100%;
+  object-fit: cover;
+  border: 3px solid #4B2E2E;
+}
+.Logoimage{
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* A bouncy transition */
+}
+
+.Logoimage:hover{
+  transform: rotate(-5deg) scale(1.05); /* Tilts and grows slightly */
+}
+.Main{
+  text-align: center;
+  background-color: #001F3F;
+}
+.TT-image {
+ background-image: url("./timetable.png");
+ width: 30vh;
+ height: 15vh;
+ justify-content: center;
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+ border: 3px solid #4B2E2E;
+ border-radius: 5%;
+}
+.TimeTableCard{
+  width: 30vh;
+  height: 50vh;
+  border-radius: 10px;
+  background-color: beige;
+  position: relative;
+  padding: 1.5rem;
+  border: 5px solid #4B2E2E;
+  transition: 0.5s;
+  overflow:visible;
+  box-shadow: #5a3a3a 10px 10px 10px;
+}
+.TimeTableCard:hover{
+  box-shadow: #5a3a3a 20px 20px 20px;
+  transform: translateY(-10px);
+}
+.Main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
+.TT-title{
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4B2E2E;
+}
+.TT-info{
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #4B2E2E;
+}
+.TT-button{
+  position: absolute;
+  bottom: 1.5rem;
+  transform: translateX(-50%);
+  padding: 0.5rem 1rem;
+  background-color: #4B2E2E;
+  color: white;
+  border: 3px solid #556B2F ;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.TT-button {
+  /* Your existing styles */
+  transition: all 0.3s ease; /* Smooth transition for all changes */
+}
+
+.TT-button:hover {
+  background-color: #5a3a3a; /* A slightly darker or different shade */
+  color: #fff;
+  width: 50%; /* Slightly increase the size */
+  height: auto; /* Adjust height accordingly */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.TT-button:active {
+  box-shadow: none;
+}
+/* 1. Define the animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px); /* Start 30px below its final position */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End at its normal position */
+  }
+}
+
+/* 2. Apply the animation to your card element */
+/* Let's assume your card has a class like .timetable-card */
+.TimeTableCard {
+  /* ... your existing styles for the card ... */
+  
+  /* Use the animation we defined */
+  animation-name: fadeInUp;
+  animation-duration: 0.8s; /* How long the animation takes */
+  animation-fill-mode: backwards; /* Ensures it starts with the 'from' styles */
+  animation-timing-function: ease-out;
+}
